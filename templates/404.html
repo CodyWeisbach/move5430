@@ -1,0 +1,29 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">  
+
+        <title>404 Error | Move 5430</title>
+    
+        <link rel="stylesheet" href="{% static 'css/base.css' %}" type="text/css" />
+        
+    </head>
+
+    <body>
+        <section id="masthead">
+            <h1>
+                <a href="/">Move 5430</a>
+            </h1>
+        </section>
+
+        <div id="content">
+            <section id="short-about">
+                <h2>Looks like you are lost!</h2>
+                <h2>Head back to the <a href="{% url 'index' %}">Main Page</a> to get back on track</h2>
+        </div>
+    </body>
+</html>
