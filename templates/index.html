@@ -1,0 +1,61 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">  
+
+        <title>Home | Move 5430</title>
+    
+        <link rel="stylesheet" href="{% static 'css/base.css' %}" type="text/css" />
+        
+    </head>
+
+    <body>
+        <section id="masthead">
+            <h1>
+                <a href="/">Move 5430</a>
+            </h1>
+        </section>
+
+        <div id="content">
+            <section id="short-about">
+                <h2>About Move 5430: The Short Version</h2>
+                <p>A little blurb</p>
+                <p>In just a few paragraphs</p>
+                <p>To give an idea what it's all about</p>
+            </section>
+            <section id="long-about">
+                <h2>About Move 5430: The Long Version</h2>
+                <p>Head on over <a href="{% url 'about' %}">here </a>for the full story</p>
+            </section>
+            <section id="articles">
+                <h2>Articles</h2>
+                <p><strong>Coming soon! Get on the email list to be notified when we start publishing</strong></p>
+            </section>
+            <section id="resources">
+                <h2>Resources</h2>
+                <p><strong>Coming soon! Get on the email list to be notified when we start adding resources</strong></p>
+            </section>
+            <section id="email-list">
+                <h2>Private Email List</h2>
+                <p>If you want the announcements and opportunities that are never posted publicly, get on the private email list, here:</p>
+                <p>Form will be here</p>
+            </section>
+            <section id="social">
+                <h2>Social</h2>
+                <p>We're not huge fans of social media, but it's 2018, so we post a little here and there, mostly on <a href="http://instagram.com/move5430" target="_blank">Instagram</a></p>
+                <ul>
+                    <li><a href="http://instagram.com/move5430" target="_blank">Instagram</a></li>
+                    <li><a href="http://facebook.com/move5430" target="_blank">Facebook</a></li>
+                </ul>
+            </section>
+            <section id="plans">
+                <h2>Big Plans</h2>
+                <p>We've got big plans for the site. See them <a href="{% url 'plans' %}">here </a>and get an idea of all the ways we are looking to help people in pain.</p>
+            </section>
+        </div>
+    </body>
+</html>
