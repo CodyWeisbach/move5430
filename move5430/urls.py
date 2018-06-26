@@ -25,6 +25,7 @@ urlpatterns = [
     # Main App Views
     url(r'^$', main_views.index, name='index'),
     url(r'^about/$', main_views.about, name='about'),
+    url(r'^contact/$', main_views.contact, name='contact'),
     url(r'^plans/$', main_views.plans, name='plans'),
     url(r'^cody/$', main_views.cody, name='cody'),
     url(r'^aboutcody/$', main_views.aboutcody, name='about_cody'),

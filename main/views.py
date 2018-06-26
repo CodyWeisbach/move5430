@@ -11,11 +11,14 @@ def index(request):
 def about(request):
 	return HttpResponse("this is the long about page")
 
+def contact(request):
+	return HttpResponse("this is the contact page")
+
 def plans(request):
 	return HttpResponse("this is the plans page")
 
 def cody(request):
-	return HttpResponse("this is the cody main page")
+	return render(request, "cody.html")
 
 def aboutcody(request):
 	return HttpResponse("this is the long about cody page")
