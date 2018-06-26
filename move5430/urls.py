@@ -33,6 +33,8 @@ urlpatterns = [
     url(r'^aboutcara/$', main_views.aboutcara, name='about_cara'),
     url(r'^caranow/$', main_views.caranow, name='cara_now'),
     url(r'^letters/$', main_views.letters, name='letters'),
+    url(r'^thx/$', main_views.thanks, name='thanks'),
+
 ]
 
 if settings.DEBUG:	

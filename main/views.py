@@ -34,3 +34,6 @@ def caranow(request):
 
 def letters(request):
 	return HttpResponse("this is the letters page")
+
+def thanks(request):
+	return render(request, "thanks.html")
