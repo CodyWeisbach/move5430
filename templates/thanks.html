@@ -1,61 +1,57 @@
-{% load staticfiles %}
-<!DOCTYPE html>
-<html lang="en">
+{% extends "base.html" %}
 
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">  
+{% block title %} {{ title }} {% endblock %}
 
-        <title>Thanks! | Move 5430</title>
-    
-        <link rel="stylesheet" href="{% static 'css/base.css' %}" type="text/css" />
+{% block content %}      
+    <section id="page-content">
+        <h2>Thanks for Signing Up!</h2>
+            <p>Check your email in a few minutes to confirm the sign up.</p>
+            <p>In the mean time, check out the site</p>
+            <p>Also, feel free to contact us anytime at <a href='mailto:hi@move5430.com'>hi@move5430.com</a> to let us know if there is anything you are particulary interested in learning about, or if there are ways that we might be able to help you out.</p>
+            <p>We're looking forward to hearing from you!</p>
         
-    </head>
+        <h2>About Move 5430: The Short Version</h2>
+            <p>
+                Move 5430 is all about fitness for people in pain. 
+            </p><p>
+                It was created by <a href="{% url 'cody' %}">Cody</a> and Cara, two physical therapists, who also happen to be married.  
+            </p><p>
+                We believe that pain and injury can act as a wake up call for you to reconnect with movment and your body's natural strength and resilience.
+            </p><p>
+                We aim to provide a sophisticated understanding of the interactions between pain, injury, strength, resilience, fitness and health.
+            </p><p>
+                Further, we want to provide the tools necessary for you to take ideas and put them into action.
+            </p><p> 
+                 After all, knowing what to do is the easy part. 
+            </p><p>
+                 Doing it consistently enough for long enough to see change is the hard part.
+            </p><p>
+                Last, we want to test our ideas. Many web sites collect all kinds of data to figure out how to sell you more stuff. We want to take the data from this community and use it to help the community make better, faster progress.
+            </p>
+    </section>
+    <section id="long-about">
+        <h2>About Move 5430: The Long Version</h2>
+        <p>The long version is taking, well a long time. Don't worry, it'll be up soon</p>
+    </section>
+    <section id="articles">
+        <h2>Articles</h2>
+        <p><strong>Coming soon! Get on the email list to be notified when we start publishing</strong></p>
+    </section>
+    <section id="resources">
+        <h2>Resources</h2>
+        <p><strong>Coming soon! Get on the email list to be notified when we start adding resources</strong></p>
+    </section>
+    <section id="social">
+        <h2>Social</h2>
+        <p>We're not huge fans of social media, but it's 2018, so we post a little here and there, mostly on <a href="http://instagram.com/move5430" target="_blank">Instagram</a></p>
+        <ul>
+            <li><a href="http://instagram.com/move5430" target="_blank">Instagram</a></li>
+            <li><a href="http://facebook.com/move5430" target="_blank">Facebook</a></li>
+        </ul>
+    </section>
+    <section id="plans">
+        <h2>Big Plans</h2>
+        <p>We've got big plans for the site. They will be up soon so you can get an idea of all the ways we are looking to help people in pain.</p>
+    </section>
 
-    <body>
-        <section id="masthead">
-            <h1>
-                <a href="/">Move 5430</a>
-            </h1>
-        </section>
-
-        <div id="content">
-            <section id="short-about">
-                <h2>Thanks for Signing Up!</h2>
-                <p>Check your email in a few minutes to confirm the sign up.</p>
-                <p>In the mean time, check out the site</p>
-                <p>Also, feel free to contact us anytime at <a href='mailto:hi@move5430.com'>hi@move5430.com</a> to let us know if there is anything you are particulary interested in learning about, or if there are ways that we might be able to help you out.</p>
-                <p>We're looking forward to hearing from you!</p>
-                <h2>About Move 5430: The Short Version</h2>
-                <p>A little blurb</p>
-                <p>In just a few paragraphs</p>
-                <p>To give an idea what it's all about</p>
-            </section>
-            <section id="long-about">
-                <h2>About Move 5430: The Long Version</h2>
-                <p>The long version is taking, well a long time. Don't worry, it'll be up soon</p>
-            </section>
-            <section id="articles">
-                <h2>Articles</h2>
-                <p><strong>Coming soon! Get on the email list to be notified when we start publishing</strong></p>
-            </section>
-            <section id="resources">
-                <h2>Resources</h2>
-                <p><strong>Coming soon! Get on the email list to be notified when we start adding resources</strong></p>
-            </section>
-            <section id="social">
-                <h2>Social</h2>
-                <p>We're not huge fans of social media, but it's 2018, so we post a little here and there, mostly on <a href="http://instagram.com/move5430" target="_blank">Instagram</a></p>
-                <ul>
-                    <li><a href="http://instagram.com/move5430" target="_blank">Instagram</a></li>
-                    <li><a href="http://facebook.com/move5430" target="_blank">Facebook</a></li>
-                </ul>
-            </section>
-            <section id="plans">
-                <h2>Big Plans</h2>
-                <p>We've got big plans for the site. They will be up soon so you can get an idea of all the ways we are looking to help people in pain.</p>
-            </section>
-        </div>
-    </body>
-</html>
+{% endblock %}

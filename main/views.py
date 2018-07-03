@@ -4,24 +4,33 @@ from __future__ import unicode_literals
 from django.http import HttpResponse
 from django.shortcuts import render
 
-# Create your views here.
+# Completed views
 def index(request):
 	return render(request, "index.html")
-
-def about(request):
-	return HttpResponse("this is the long about page")
-
-def contact(request):
-	return HttpResponse("this is the contact page")
-
-def plans(request):
-	return HttpResponse("this is the plans page")
 
 def cody(request):
 	return render(request, "cody.html")
 
-def aboutcody(request):
-	return HttpResponse("this is the long about cody page")
+def thanks(request):
+	return render(request, "thanks.html")
+
+def letters(request):
+	context = {
+	"title": "Letters"
+	}
+	return render(request, "letters.html", context)
+
+def contact(request):
+	context = {
+	"title": "Contact"
+	}
+	return render(request, "contact.html", context)
+
+# Priority to launch	
+
+
+
+
 
 def codynow(request):
 	return HttpResponse("this is the cody now page")
@@ -29,14 +38,24 @@ def codynow(request):
 def cara(request):
 	return HttpResponse("this is the cara main page")
 
-def aboutcara(request):
-	return HttpResponse("this is the long about cara page")
-
 def caranow(request):
 	return HttpResponse("this is the cara now page")
 
-def letters(request):
-	return HttpResponse("this is the letters page")
 
-def thanks(request):
-	return render(request, "thanks.html")
+# Next tier priority
+
+def about(request):
+	return HttpResponse("this is the long about page")
+
+def aboutcody(request):
+	return HttpResponse("this is the long about cody page")
+
+def plans(request):
+	return HttpResponse("this is the plans page")
+
+def aboutcara(request):
+	return HttpResponse("this is the long about cara page")
+
+
+
+

@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block title %} {{ title }} {% endblock %}
+			
+{% block content %}			
+	
+	<section id="page-content">
+		<h1>{{ title }} - <a href='mailto:cody@move5430.com'>cody@move5430.com.</a></h1>
+			<p>
+				I love hearing from the people who come to the site, so feel please email me at <a href='mailto:cody@move5430.com'>cody@move5430.com</a> and introduce yourself. 
+			</p><p>
+				Let me know if there is anything you are particulary interested in learning about, or if there are ways that we might be able to help you out.
+			</p><p><strong>
+				Disclaimer!
+			</strong></p><p>
+				We do want to be up front that we can't offer advice about your specific condition. In order to do that, we would have to do a formal, in person evaluation, which is well beyond the scope of this site. 
+			</p><p>
+				If you are interested in working with either of us check out are individual pages (<a href="{% url 'cody' %}">here for Cody</a> and <a href="{% url 'cara' %}">here for Cara</a>)
+			</p><p>
+				We're looking forward to hearing from you!
+			</p>
+	</section>
+
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+

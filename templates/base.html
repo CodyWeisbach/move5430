@@ -1,0 +1,33 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">  
+
+        <title>{% block title %} {% endblock %} | Move 5430</title>
+    
+        <link rel="stylesheet" href="{% static 'css/base.css' %}" type="text/css" />
+        
+    </head>
+
+    <body>
+        <section id="masthead">
+            <h1>
+                <a href="/">Move 5430</a>
+            </h1>
+        </section>
+
+        <div id="content">
+            
+            {% block content %}
+            {% endblock %}
+            
+            <section id="footer">
+                <p>&copy; Move 5430</p>
+            </section>
+        </div>
+    </body>
+</html>
