@@ -18,6 +18,7 @@ from django.conf.urls import url
 from django.conf.urls.static import static
 from django.contrib import admin
 from main import views as main_views
+from blog import views as blog_views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
@@ -35,6 +36,13 @@ urlpatterns = [
     url(r'^caranow/$', main_views.caranow, name='cara_now'),
     url(r'^letters/$', main_views.letters, name='letters'),
     url(r'^thx/$', main_views.thanks, name='thanks'),
+
+    # Blog App Views
+    url(r'^create/$', blog_views.blog_create, name='create'),
+    url(r'^(?P<slug>[\w-]+)/$', blog_views.blog_detail, name='detail'),
+    url(r'^(?P<slug>[\w-]+)/edit/$', blog_views.blog_update, name='update'),
+    url(r'^blog/$', blog_views.blog_list, name='list'),
+    url(r'^(?P<slug>[\w-]+)/delete/$', blog_views.blog_delete, name='delete')
 
 ]
 
