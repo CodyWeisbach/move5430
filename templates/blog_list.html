@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %} {{ title }} {% endblock %}
+
+{% block type %} {{ type }} {% endblock %}
+
+{% block content %}
+
+<h1>Articles:</h1>
+<ul>
+	{% for p in posts %}
+	<li><a href="{{ p.get_absolute_url }}">{{ p.title }}</a>{% if p.draft %} <small><span style='color:red'> (Draft)</span></small> {% endif %}</li>
+	{% endfor %}
+</ul>
+
+{% endblock %}

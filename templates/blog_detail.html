@@ -1,12 +1,17 @@
 {% extends "base.html" %}
 {% block title %} {{ title }} {% endblock %}
 
+{% block type %} {{ type }} {% endblock %}
+
 {% block content %}
 
 <article>
 	<header>
-		<h1>{{ post.title }}</h1>
-		<small> {{ post.timestamp }} </small>
+		<div class="blogparent">
+			<a href="{% url 'list' %}">Articles</a>:
+		</div>
+		<h1>{{ post.title }} {% if post.draft %} <small><span style='color:red'> (Draft)</span></small> {% endif %}</h1>
+		<small> {{ post.timestamp | date:'m/d/Y'}} </small>
 	</header>
 	<p> {{ post.text | linebreaks}} </p>
 </article>

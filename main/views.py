@@ -12,11 +12,15 @@ def cody(request):
 	return render(request, "cody.html")
 
 def thanks(request):
-	return render(request, "thanks.html")
+	context = {
+	"type": "about"
+	}
+	return render(request, "thanks.html", context)
 
 def letters(request):
 	context = {
-	"title": "Letters"
+	"title": "Letters",
+	"type": "about"
 	}
 	return render(request, "letters.html", context)
 

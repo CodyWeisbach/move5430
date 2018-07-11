@@ -10,7 +10,7 @@ from django.utils.text import slugify
 
 class PostManager(models.Manager):
     def active(self, *args, **kwargs):
-        return super(ExerciseManager, self).filter(draft=False)
+        return super(PostManager, self).filter(draft=False)
 
 def upload_location(instance, filename):
     return "%s/%s" %('posts', filename)

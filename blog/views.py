@@ -2,7 +2,7 @@
 from __future__ import unicode_literals
 
 from django.contrib.auth.decorators import login_required
-from django.http import HttpResponse, HttpResponseRedirect
+from django.http import HttpResponse, HttpResponseRedirect, Http404
 from django.shortcuts import render, redirect, get_object_or_404
 from .forms import BlogForm
 from.models import BlogPost
@@ -30,11 +30,20 @@ def blog_detail(request, slug=None):
 	context = {
 		"title": instance.title,
 		"post": instance,
+		"type": "oneblog"
 	}
 	return render(request, "blog_detail.html", context)
 
 def blog_list(request):
-	return HttpResponse("here's the blog list page")
+	query = BlogPost.objects.active()
+	if request.user.is_staff or request.user.is_superuser:
+		query = BlogPost.objects.all()
+	context = {
+	"title": "blog",
+	"type": "content",
+	"posts": query
+	}
+	return render(request, "blog_list.html", context)
 
 @login_required
 def blog_update(request):
