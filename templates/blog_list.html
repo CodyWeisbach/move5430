@@ -5,6 +5,10 @@
 
 {% block content %}
 
+{% if request.user.is_staff or request.user.is_superuser %}
+<h3><a href="{% url 'create' %}">Create a New Post</a></h3>
+{% endif %}
+
 <h1>Articles:</h1>
 <ul>
 	{% for p in posts %}

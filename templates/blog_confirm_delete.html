@@ -10,15 +10,19 @@
 		<div class="blogparent">
 			<a href="{% url 'list' %}">Articles</a>:
 		</div>
+		<h1><span style='color:red'>You Are About to Delete this Post.</span></h1>
+		<h1><span style='color:red'>Are You Sure?</span></h1>
+		
+		<h2><a href="{{ post.get_absolute_url }}">No, take me back to the Post</a></h2>
+		<h2><a href="{{post.get_absolute_url }}delete"><span style='color:red'>Yes, Delete this</span></a></h2>
+
+		<hr>
+		
 		<h1>{{ post.title }} {% if post.draft %} <small><span style='color:red'> (Draft)</span></small> {% endif %}</h1>
 		<small> {{ post.timestamp | date:'m/d/Y'}} </small>
 	</header>
 	<p> {{ post.text | safe }} </p>
 
-	{% if request.user.is_staff or request.user.is_superuser %}
-	<h3><a href="{{ post.get_absolute_url }}edit">Edit Post</a></h3>
-	<h3><a href="{{ post.get_absolute_url }}del-conf"><span style='color:red'>Delete Post</span></a></h3>
-	{% endif %}
 </article>
 
 

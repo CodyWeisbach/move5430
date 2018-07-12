@@ -42,7 +42,10 @@ urlpatterns = [
     url(r'^blog/$', blog_views.blog_list, name='list'),
     url(r'^(?P<slug>[\w-]+)/$', blog_views.blog_detail, name='detail'),
     url(r'^(?P<slug>[\w-]+)/edit/$', blog_views.blog_update, name='update'),
+    url(r'^(?P<slug>[\w-]+)/del-conf/$', blog_views.blog_confirm_delete, name='confirm_delete'),
     url(r'^(?P<slug>[\w-]+)/delete/$', blog_views.blog_delete, name='delete')
+
+
 
 ]
 
