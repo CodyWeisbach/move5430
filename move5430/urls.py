@@ -37,6 +37,10 @@ urlpatterns = [
     url(r'^letters/$', main_views.letters, name='letters'),
     url(r'^thx/$', main_views.thanks, name='thanks'),
 
+    url(r'^movementoverpain/$', main_views.mop, name='mop'),
+
+
+
     # Blog App Views
     url(r'^create/$', blog_views.blog_create, name='create'),
     url(r'^blog/$', blog_views.blog_list, name='list'),

@@ -30,6 +30,12 @@ def contact(request):
 	}
 	return render(request, "contact.html", context)
 
+def mop(request):
+	context = {
+	"title": "Choose Movement Over Pain"
+	}
+	return render(request, "mop.html", context)
+
 # Priority to launch	
 
 
